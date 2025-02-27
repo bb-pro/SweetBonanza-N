@@ -23,21 +23,21 @@ class CompletionStatusVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        SoundManager.shared.stopBackgroundMusic()
+        AudioController.shared.stopBackgroundMusic()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        SoundManager.shared.playBackgroundMusic()
+        AudioController.shared.playBackgroundMusic()
     }
     
     @IBAction func backTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func nextTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         if let isWon = isWon  {
             if level! < 11 {
                 let vc = storyboard?.instantiateViewController(withIdentifier: "MainGameVC") as! MainGameVC
@@ -66,7 +66,7 @@ private extension CompletionStatusVC {
             let addedValue: Int = isWon ? 132 : 0
             GameManagerClass.shared.updateValues(key: GameManagerClass.shared.coins,
                                                  value: GameManagerClass.shared.getCoins() + addedValue)
-            if isWon && level == (GameManagerClass.shared.getValueOfKey(key: GameManagerClass.shared.level) as! Int) && level < 11 {
+            if isWon && level == (GameManagerClass.shared.getLevel()) && level < 11 {
                 GameManagerClass.shared.updateValues(key: GameManagerClass.shared.level,
                                                      value: (level + 1))
             }

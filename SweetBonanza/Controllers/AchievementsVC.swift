@@ -5,7 +5,7 @@ class AchievementsVC: UIViewController {
     @IBOutlet var achievementImages: [UIImageView]!
     @IBOutlet var viewsToSetBorder: [UIView]!
     
-    let achievements = GameManagerClass.shared.getValueOfKey(key: GameManagerClass.shared.achievements) as! [Int]
+    let achievements = GameManagerClass.shared.getAchievements()
     override func viewDidLoad() {
         super.viewDidLoad()
         for achievementImage in achievementImages {
@@ -22,7 +22,7 @@ class AchievementsVC: UIViewController {
         }
     }
     @IBAction func backTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         navigationController?.popToRootViewController(animated: true)
     }
 }

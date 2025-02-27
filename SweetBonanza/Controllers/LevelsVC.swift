@@ -13,19 +13,19 @@ class LevelsVC: UIViewController {
     }
     
     @IBAction func levelTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         let vc = storyboard?.instantiateViewController(withIdentifier: "MainGameVC") as! MainGameVC
         vc.level = sender.tag
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func backTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         navigationController?.popToRootViewController(animated: true)
     }
     
     func defineUserAppearance() {
-        let level = GameManagerClass.shared.getValueOfKey(key: GameManagerClass.shared.level) as! Int
+        let level = GameManagerClass.shared.getLevel()
         for levelButton in levelButtons {
             if levelButton.tag <= level {
                 levelButton.isUserInteractionEnabled = true

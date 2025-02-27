@@ -18,8 +18,12 @@
 		D114BDB92D4CE26A00768CC0 /* ShapeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D114BDB82D4CE26A00768CC0 /* ShapeValidator.swift */; };
 		D114BDBB2D4CEA4700768CC0 /* CompletionStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D114BDBA2D4CEA4700768CC0 /* CompletionStatusVC.swift */; };
 		D11E02F62D6F45E00005FAAD /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E02F52D6F45E00005FAAD /* HowToPlayViewController.swift */; };
+		D11E03052D7057620005FAAD /* RecipesInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E03042D7057620005FAAD /* RecipesInformation.swift */; };
+		D11E03072D705DDF0005FAAD /* AsefvsdfyhdfvdsfbdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E03062D705DDF0005FAAD /* AsefvsdfyhdfvdsfbdfViewController.swift */; };
+		D11E03092D705E470005FAAD /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E03082D705E470005FAAD /* OnboardingItem.swift */; };
+		D11E030B2D705E9D0005FAAD /* ForAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E030A2D705E9D0005FAAD /* ForAdditions.swift */; };
 		D153F8DC2D4D4CE500D05671 /* PauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153F8DB2D4D4CE500D05671 /* PauseVC.swift */; };
-		D153F8DE2D4E093600D05671 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153F8DD2D4E093600D05671 /* SoundManager.swift */; };
+		D153F8DE2D4E093600D05671 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153F8DD2D4E093600D05671 /* AudioController.swift */; };
 		D153F8EC2D4E0A2A00D05671 /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D153F8E82D4E0A2A00D05671 /* lose.mp3 */; };
 		D153F8ED2D4E0A2A00D05671 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D153F8E92D4E0A2A00D05671 /* win.mp3 */; };
 		D153F8EE2D4E0A2A00D05671 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D153F8EA2D4E0A2A00D05671 /* click.mp3 */; };
@@ -47,8 +51,12 @@
 		D114BDB82D4CE26A00768CC0 /* ShapeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeValidator.swift; sourceTree = "<group>"; };
 		D114BDBA2D4CEA4700768CC0 /* CompletionStatusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionStatusVC.swift; sourceTree = "<group>"; };
 		D11E02F52D6F45E00005FAAD /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
+		D11E03042D7057620005FAAD /* RecipesInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInformation.swift; sourceTree = "<group>"; };
+		D11E03062D705DDF0005FAAD /* AsefvsdfyhdfvdsfbdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsefvsdfyhdfvdsfbdfViewController.swift; sourceTree = "<group>"; };
+		D11E03082D705E470005FAAD /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
+		D11E030A2D705E9D0005FAAD /* ForAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForAdditions.swift; sourceTree = "<group>"; };
 		D153F8DB2D4D4CE500D05671 /* PauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseVC.swift; sourceTree = "<group>"; };
-		D153F8DD2D4E093600D05671 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		D153F8DD2D4E093600D05671 /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		D153F8E82D4E0A2A00D05671 /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
 		D153F8E92D4E0A2A00D05671 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 		D153F8EA2D4E0A2A00D05671 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
@@ -85,6 +93,16 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		D11E03032D70574F0005FAAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D11E03042D7057620005FAAD /* RecipesInformation.swift */,
+				D11E03082D705E470005FAAD /* OnboardingItem.swift */,
+				D11E030A2D705E9D0005FAAD /* ForAdditions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D153F8DF2D4E099400D05671 /* SoundFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +137,7 @@
 				D1AE9EEB2D4B69000070212F /* Controllers */,
 				D1AE9EE62D4B58F50070212F /* Storyboards */,
 				D1AE9EDF2D4B588C0070212F /* Info.plist */,
+				D11E03032D70574F0005FAAD /* Model */,
 				D153F8DF2D4E099400D05671 /* SoundFiles */,
 				D114BDB72D4CE25900768CC0 /* Helper */,
 				D1AE9EE72D4B58FD0070212F /* CoreData */,
@@ -151,7 +170,7 @@
 			children = (
 				D1AE9ED72D4B588A0070212F /* SweetBonanza.xcdatamodeld */,
 				D114BDA92D4C70DE00768CC0 /* GameManagerClass.swift */,
-				D153F8DD2D4E093600D05671 /* SoundManager.swift */,
+				D153F8DD2D4E093600D05671 /* AudioController.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -179,6 +198,7 @@
 				D114BDBA2D4CEA4700768CC0 /* CompletionStatusVC.swift */,
 				D153F8DB2D4D4CE500D05671 /* PauseVC.swift */,
 				D11E02F52D6F45E00005FAAD /* HowToPlayViewController.swift */,
+				D11E03062D705DDF0005FAAD /* AsefvsdfyhdfvdsfbdfViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,10 +284,13 @@
 				D1AE9EED2D4B6B1F0070212F /* InitialVC.swift in Sources */,
 				D1AE9ED32D4B588A0070212F /* StartingVC.swift in Sources */,
 				D114BDAA2D4C70DE00768CC0 /* GameManagerClass.swift in Sources */,
+				D11E03072D705DDF0005FAAD /* AsefvsdfyhdfvdsfbdfViewController.swift in Sources */,
 				D114BDBB2D4CEA4700768CC0 /* CompletionStatusVC.swift in Sources */,
 				D114BDB62D4CD62C00768CC0 /* MainGameVC.swift in Sources */,
 				D114BDB22D4C7E0800768CC0 /* ShopVC.swift in Sources */,
 				D114BDB92D4CE26A00768CC0 /* ShapeValidator.swift in Sources */,
+				D11E03052D7057620005FAAD /* RecipesInformation.swift in Sources */,
+				D11E03092D705E470005FAAD /* OnboardingItem.swift in Sources */,
 				D1AE9ECF2D4B588A0070212F /* AppDelegate.swift in Sources */,
 				D114BDAE2D4C78D500768CC0 /* AchievementsVC.swift in Sources */,
 				D1AE9ED92D4B588A0070212F /* SweetBonanza.xcdatamodeld in Sources */,
@@ -276,7 +299,8 @@
 				D11E02F62D6F45E00005FAAD /* HowToPlayViewController.swift in Sources */,
 				D114BDB02D4C79DF00768CC0 /* SettingsVC.swift in Sources */,
 				D153F8DC2D4D4CE500D05671 /* PauseVC.swift in Sources */,
-				D153F8DE2D4E093600D05671 /* SoundManager.swift in Sources */,
+				D153F8DE2D4E093600D05671 /* AudioController.swift in Sources */,
+				D11E030B2D705E9D0005FAAD /* ForAdditions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

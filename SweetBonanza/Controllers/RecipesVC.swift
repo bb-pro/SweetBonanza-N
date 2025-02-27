@@ -17,13 +17,13 @@ class RecipesVC: UIViewController {
         }
     }
     @IBAction func recipeGotTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         let vc = storyboard?.instantiateViewController(withIdentifier: "RecipeDescriptionVC") as! RecipeDescriptionVC
         vc.index = sender.tag
         navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func backTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         navigationController?.popToRootViewController(animated: true)
     }
 }

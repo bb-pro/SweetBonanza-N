@@ -15,37 +15,37 @@ class InitialVC: UIViewController {
     }
     
     @IBAction func playTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         let vc = main.instantiateViewController(withIdentifier: "LevelsVC") as! LevelsVC
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func shopTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         let vc = main.instantiateViewController(withIdentifier: "ShopVC") as! ShopVC
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func achievementTaooed(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         let vc = main.instantiateViewController(withIdentifier: "AchievementsVC") as! AchievementsVC
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func settingsTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         let vc = main.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func recipesTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         let vc = main.instantiateViewController(withIdentifier: "RecipesVC") as! RecipesVC
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func howToPlayGotClicked(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         if let passViewCOntroller = main.instantiateViewController(withIdentifier: "HowToPlayViewController") as? HowToPlayViewController {
             navigationController?.pushViewController(passViewCOntroller, animated: true)
         }

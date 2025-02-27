@@ -9,7 +9,7 @@ class ShopVC: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var leftButton: UIButton!
     
-    var availableBackgrounds = GameManagerClass.shared.getValueOfKey(key: GameManagerClass.shared.availableBackground) as! [Int]
+    var availableBackgrounds = GameManagerClass.shared.getAvailableBackgrounds()
     var selectedBackgroud = GameManagerClass.shared.getValueOfKey(key: GameManagerClass.shared.selectedBackgroud) as! Int
     var index = 0
     
@@ -22,12 +22,12 @@ class ShopVC: UIViewController {
     }
     
     @IBAction func backTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func leftTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         if index > 0 {
             index -= 1
             setupUI()
@@ -35,7 +35,7 @@ class ShopVC: UIViewController {
     }
     
     @IBAction func rightTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         if index < 5 {
             index += 1
             setupUI()
@@ -43,7 +43,7 @@ class ShopVC: UIViewController {
     }
     
     @IBAction func buyTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         if index >= 0 && index <= 5 {
             if availableBackgrounds.contains(index) {
                 GameManagerClass.shared.updateValues(key: GameManagerClass.shared.selectedBackgroud, value: index)

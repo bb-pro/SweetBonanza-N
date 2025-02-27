@@ -86,7 +86,7 @@ milk chocolate
     }
     
     @IBAction func pauseTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         pauseTimer()
         let vc = storyboard?.instantiateViewController(withIdentifier: "PauseVC") as! PauseVC
         vc.infoText = gameInstructionLabel.text
@@ -247,7 +247,7 @@ private extension MainGameVC {
             }
             
             print("success")
-            SoundManager.shared.playWinSound()
+            AudioController.shared.playWinSound()
             let vc = storyboard?.instantiateViewController(withIdentifier: "CompletionStatusVC") as! CompletionStatusVC
             vc.isWon = true
             vc.level = level
@@ -259,7 +259,7 @@ private extension MainGameVC {
             unbeatenMatches = 0
             GameManagerClass.shared.updateValues(key: GameManagerClass.shared.unbeatenMoves,
                                                  value: unbeatenMatches)
-            SoundManager.shared.playLoseSound()
+            AudioController.shared.playLoseSound()
             let vc = storyboard?.instantiateViewController(withIdentifier: "CompletionStatusVC") as! CompletionStatusVC
             vc.isWon = false
             vc.level = level

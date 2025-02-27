@@ -16,19 +16,19 @@ class PauseVC: UIViewController {
     }
     
     @IBAction func continueTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func restartTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         let vc = storyboard?.instantiateViewController(withIdentifier: "MainGameVC") as! MainGameVC
         vc.level = level
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func backToMenuTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         navigationController?.popToRootViewController(animated: true)
     }
 }

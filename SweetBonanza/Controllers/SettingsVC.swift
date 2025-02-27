@@ -20,7 +20,7 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func soundMinusTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         if soundVolume >= Double(0.1) {
             soundVolume -= Double(0.1)
             setupUserAppearance()
@@ -28,7 +28,7 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func soundPlusTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         if soundVolume <= Double(0.9) {
             soundVolume += 0.1
             setupUserAppearance()
@@ -36,7 +36,7 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func musicMinusTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         if musicVolume >= Double(0.1) {
             musicVolume -= Double(0.1)
             setupUserAppearance()
@@ -44,7 +44,7 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func musicPlusTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         if musicVolume <= Double(0.9) {
             musicVolume += 0.1
             setupUserAppearance()
@@ -52,7 +52,7 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func backTapped(_ sender: UIButton) {
-        SoundManager.shared.playClickSound()
+        AudioController.shared.playClickSound()
         navigationController?.popToRootViewController(animated: true)
     }
     
@@ -60,8 +60,8 @@ class SettingsVC: UIViewController {
         if soundVolume >= Double(0.0) && soundVolume <= Double(1.0) && musicVolume >= Double(0.0) && musicVolume <= Double(1.0) {
             soundProgressView.progress = Float(soundVolume)
             musicProgressView.progress = Float(musicVolume)
-            SoundManager.shared.setMusicVolume(Float(musicVolume))
-            SoundManager.shared.setSoundVolume(Float(soundVolume))
+            AudioController.shared.setMusicVolume(Float(musicVolume))
+            AudioController.shared.setSoundVolume(Float(soundVolume))
             GameManagerClass.shared.updateValues(key: GameManagerClass.shared.soundVolume, value: soundVolume)
             GameManagerClass.shared.updateValues(key: GameManagerClass.shared.musicVolume, value: musicVolume)
         }
